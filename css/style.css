@@ -76,11 +76,8 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 .nav-logo {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  color: var(--black);
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
@@ -1491,4 +1488,152 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   .cta-contact { flex-direction: column; gap: 1.5rem; align-items: center; }
   .footer { padding: 4rem 2rem; }
   .occasions-wheel { width: 280px; height: 280px; }
+}
+
+/* ===== LOGO IMAGE ===== */
+.logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.logo-img--footer {
+  height: 44px;
+  margin: 0 auto;
+}
+
+/* ===== SEARCH HOOK (Belief Section) ===== */
+.search-hook {
+  margin: 2.5rem auto 3rem;
+  max-width: 560px;
+  text-align: center;
+}
+
+.search-hook-lead {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--text-body);
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.02em;
+}
+
+.search-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(201, 168, 76, 0.06);
+  border: 1px solid var(--beige-2);
+  border-left: 3px solid var(--gold);
+  border-radius: 4px;
+  padding: 0.75rem 1.2rem;
+  text-align: left;
+}
+
+.search-num {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--gold-dk);
+  min-width: 1.8rem;
+}
+
+.search-engine {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  min-width: 5rem;
+}
+
+.search-query {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--text-light);
+}
+
+/* ===== TESTIMONIALS SECTION ===== */
+.page-testimonials {
+  background: var(--ivory-2);
+  min-height: auto;
+  padding: 7rem 4rem;
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonials-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.testimonial-card {
+  background: var(--ivory);
+  border: 1px solid var(--beige-2);
+  border-top: 3px solid var(--gold);
+  padding: 2.5rem 2rem;
+  border-radius: 4px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  transition: box-shadow var(--transition-fast);
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 8px 32px rgba(201, 168, 76, 0.12);
+}
+
+.testimonial-text {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--text-body);
+}
+
+.testimonial-author {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-dk);
+}
+
+@media (max-width: 900px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .page-testimonials { padding: 5rem 2rem; }
+}
+
+@media (max-width: 600px) {
+  .search-hook { padding: 0 1rem; }
+  .search-item { flex-wrap: wrap; gap: 0.4rem; }
+  .search-engine { min-width: auto; }
+  .logo-img { height: 38px; }
 }
