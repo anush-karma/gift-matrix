@@ -1491,15 +1491,20 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 /* ===== LOGO IMAGE ===== */
-.logo-img {
-  height: 48px;
-  width: auto;
+.nav-logo .logo-img {
+  height: 28px !important;
+  width: auto !important;
+  max-width: 160px;
   display: block;
+  object-fit: contain;
 }
 
-.logo-img--footer {
-  height: 44px;
+.footer-logo .logo-img--footer {
+  height: 28px !important;
+  width: auto !important;
+  max-width: 160px;
   margin: 0 auto;
+  object-fit: contain;
 }
 
 /* ===== SEARCH HOOK (Belief Section) ===== */
