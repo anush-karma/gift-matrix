@@ -118,8 +118,12 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .nav-toggle span {
   display: block;
   width: 22px; height: 1.5px;
-  background: var(--black);
+  background: var(--gold);
   transition: var(--transition-fast);
+}
+
+.nav.scrolled .nav-toggle span {
+  background: var(--black);
 }
 
 .nav-mobile {
@@ -161,7 +165,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   width: 60px;
   height: 1px;
   background: var(--gold);
-  margin-bottom: 3rem;
+  margin: 0 auto 3rem;
 }
 
 /* ===== REVEAL ANIMATIONS ===== */
@@ -847,7 +851,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 
 .process-flow {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 0;
   margin-bottom: 3rem;
   flex-wrap: wrap;
@@ -1492,80 +1496,26 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 
 /* ===== LOGO IMAGE ===== */
 .nav-logo .logo-img {
-  height: 28px !important;
-  width: auto !important;
-  max-width: 160px;
+  height: 44px;
+  width: auto;
+  max-width: 180px;
   display: block;
   object-fit: contain;
 }
 
+/* Invert logo to white on dark hero background before scrolling */
+.nav:not(.scrolled) .nav-logo .logo-img {
+  filter: brightness(0) invert(1);
+}
+
 .footer-logo .logo-img--footer {
-  height: 28px !important;
-  width: auto !important;
-  max-width: 160px;
+  height: 40px;
+  width: auto;
+  max-width: 180px;
   margin: 0 auto;
   object-fit: contain;
 }
 
-/* ===== SEARCH HOOK (Belief Section) ===== */
-.search-hook {
-  margin: 2.5rem auto 3rem;
-  max-width: 560px;
-  text-align: center;
-}
-
-.search-hook-lead {
-  font-family: var(--font-serif);
-  font-size: 1.2rem;
-  font-style: italic;
-  color: var(--text-body);
-  margin-bottom: 1.8rem;
-  letter-spacing: 0.02em;
-}
-
-.search-items {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-}
-
-.search-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: rgba(201, 168, 76, 0.06);
-  border: 1px solid var(--beige-2);
-  border-left: 3px solid var(--gold);
-  border-radius: 4px;
-  padding: 0.75rem 1.2rem;
-  text-align: left;
-}
-
-.search-num {
-  font-family: var(--font-sans);
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  color: var(--gold-dk);
-  min-width: 1.8rem;
-}
-
-.search-engine {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--charcoal);
-  min-width: 5rem;
-}
-
-.search-query {
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
-  font-style: italic;
-  color: var(--text-light);
-}
 
 /* ===== TESTIMONIALS SECTION ===== */
 .page-testimonials {
@@ -1637,8 +1587,5 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 @media (max-width: 600px) {
-  .search-hook { padding: 0 1rem; }
-  .search-item { flex-wrap: wrap; gap: 0.4rem; }
-  .search-engine { min-width: auto; }
-  .logo-img { height: 38px; }
+  .nav-logo .logo-img { height: 38px; }
 }
