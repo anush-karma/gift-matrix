@@ -892,11 +892,15 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 .process-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.5rem;
   color: var(--gold);
   opacity: 0.5;
   padding: 0 0.5rem;
   flex-shrink: 0;
+  align-self: stretch;
 }
 
 .process-quote {
@@ -1496,9 +1500,9 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 
 /* ===== LOGO IMAGE ===== */
 .nav-logo .logo-img {
-  height: 44px;
+  height: 56px;
   width: auto;
-  max-width: 180px;
+  max-width: 220px;
   display: block;
   object-fit: contain;
 }
@@ -1509,9 +1513,9 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 .footer-logo .logo-img--footer {
-  height: 40px;
+  height: 52px;
   width: auto;
-  max-width: 180px;
+  max-width: 220px;
   margin: 0 auto;
   object-fit: contain;
 }
@@ -1587,5 +1591,5 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 @media (max-width: 600px) {
-  .nav-logo .logo-img { height: 38px; }
+  .nav-logo .logo-img { height: 42px; }
 }
