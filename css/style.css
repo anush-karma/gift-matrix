@@ -1156,11 +1156,13 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 .cta-contact {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 3rem;
   margin-bottom: 3rem;
-  flex-wrap: wrap;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-contact-item {
@@ -1493,18 +1495,18 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   .who-container, .whyus-container, .faq-container,
   .compare-container { padding: 0 2rem; }
   .serve-grid { grid-template-columns: 1fr; }
-  .cta-contact { flex-direction: column; gap: 1.5rem; align-items: center; }
+  .cta-contact { grid-template-columns: 1fr; gap: 1.5rem; }
   .footer { padding: 4rem 2rem; }
   .occasions-wheel { width: 280px; height: 280px; }
 }
 
 /* ===== LOGO IMAGE ===== */
 .nav-logo .logo-img {
-  height: 84px;
-  width: auto;
-  max-width: 220px;
+  height: 84px !important;
+  width: auto !important;
+  max-width: none;
   display: block;
-  object-fit: contain;
+  object-fit: unset;
 }
 
 /* Invert logo to white on dark hero background before scrolling */
@@ -1591,5 +1593,5 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 @media (max-width: 600px) {
-  .nav-logo .logo-img { height: 63px; }
+  .nav-logo .logo-img { height: 63px !important; }
 }
