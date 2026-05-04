@@ -56,14 +56,14 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  padding: 1.5rem 4rem;
+  padding: 0.625rem 4rem;
   transition: background var(--transition-fast), padding var(--transition-fast);
 }
 
 .nav.scrolled {
   background: rgba(248, 244, 237, 0.97);
   backdrop-filter: blur(10px);
-  padding: 1rem 4rem;
+  padding: 0.125rem 4rem;
   box-shadow: 0 1px 0 var(--beige);
 }
 
@@ -1446,8 +1446,8 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 @media (max-width: 900px) {
-  .nav { padding: 1.5rem 2rem; }
-  .nav.scrolled { padding: 1rem 2rem; }
+  .nav { padding: 0.625rem 2rem; }
+  .nav.scrolled { padding: 0.125rem 2rem; }
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
 
@@ -1484,7 +1484,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 @media (max-width: 600px) {
-  .nav { padding: 1.2rem 1.5rem; }
+  .nav { padding: 0.55rem 1.5rem; }
   .nav-mobile { padding: 1.5rem 2rem; }
   .hero-content { padding: 7rem 1.5rem 5rem; }
   .hero-title { font-size: 2.8rem; }
@@ -1500,7 +1500,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 
 /* ===== LOGO IMAGE ===== */
 .nav-logo .logo-img {
-  height: 56px;
+  height: 84px;
   width: auto;
   max-width: 220px;
   display: block;
@@ -1591,5 +1591,5 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 @media (max-width: 600px) {
-  .nav-logo .logo-img { height: 42px; }
+  .nav-logo .logo-img { height: 63px; }
 }
